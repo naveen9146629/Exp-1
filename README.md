@@ -28,10 +28,71 @@ manipulation and analysis in Python.
     `v` is an eigenvector.
 
 ## Coding
+```python
+import numpy as np
 
+# Define a two-dimensional matrix A and vector b
+A = np.array([[1, 2],
+              [3, 4]])
+
+b = np.array([5, 6])
+
+# Display the original matrix
+print("Original Matrix A:")
+print(A)
+
+print("\nVector b:")
+print(b)
+
+# Calculate the transpose of matrix A
+print("\nTranspose of Matrix A:")
+print(np.transpose(A))
+
+# Calculate the inverse of matrix A
+print("\nInverse of Matrix A:")
+print(np.linalg.inv(A))
+
+# Solve the linear equation Ax = b
+print("\nSolution of Ax = b:")
+print(np.linalg.solve(A, b))
+
+# Calculate eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(A)
+
+print("\nEigenvalues:")
+print(eigenvalues)
+
+print("\nEigenvectors:")
+print(eigenvectors)
+```
 
 ## Output
+```text
+Original Matrix A:
+[[1 2]
+ [3 4]]
 
+Vector b:
+[5 6]
+
+Transpose of Matrix A:
+[[1 3]
+ [2 4]]
+
+Inverse of Matrix A:
+[[-2.   1. ]
+ [ 1.5 -0.5]]
+
+Solution of Ax = b:
+[-4.   4.5]
+
+Eigenvalues:
+[-0.37228132  5.37228132]
+
+Eigenvectors:
+[[-0.82456484 -0.41597356]
+ [ 0.56576746 -0.90937671]]
+```
 
 ## Result
-
+The program was successfully executed using Python and the NumPy library. The transpose and inverse of the matrix were calculated, the linear equation was solved, and the eigenvalues and eigenvectors were obtained successfully. Thus, the experiment demonstrated basic matrix operations and numerical computations using NumPy.
