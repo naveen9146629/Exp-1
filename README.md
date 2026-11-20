@@ -52,6 +52,7 @@ print("\nInverse A^-1:\n", np.linalg.inv(A))
 # Step 7: Calculate eigenvalues and eigenvectors
 eigvals, eigvecs = np.linalg.eig(A)
 print("\nEigenvalues:", np.round(eigvals, 4))
+print("\nEigenvectors:\n", np.round(eigvecs, 4))
 
 # Step 8: Solve the linear equation Ax = b
 x = np.linalg.solve(A, b)
@@ -75,8 +76,11 @@ Inverse A^-1:
 
 Eigenvalues: [1.382 3.618]
 
-Solve A x = b --> x: [0.2 0.6]
+Eigenvectors:
+ [[-0.8507 -0.5257]
+ [ 0.5257 -0.8507]]
 
+Solve A x = b --> x: [0.2 0.6]
 ```
 
 ## Result
