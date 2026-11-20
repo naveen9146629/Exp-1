@@ -29,69 +29,54 @@ manipulation and analysis in Python.
 
 ## Coding
 ```python
+# Experiment 1: Matrix Operations Using NumPy
+
+# Step 1: Import NumPy library
 import numpy as np
 
-# Define a two-dimensional matrix A and vector b
-A = np.array([[1, 2],
-              [3, 4]])
+# Step 2: Create matrix A
+A = np.array([[2.0, 1.0], [1.0, 3.0]])
 
-b = np.array([5, 6])
+# Step 3: Create array b
+b = np.array([1.0, 2.0])
 
-# Display the original matrix
-print("Original Matrix A:")
-print(A)
+# Step 4: Display matrix A
+print("Matrix A:\n", A)
 
-print("\nVector b:")
-print(b)
+# Step 5: Calculate and display transpose of A
+print("\nTranspose A^T:\n", A.T)
 
-# Calculate the transpose of matrix A
-print("\nTranspose of Matrix A:")
-print(np.transpose(A))
+# Step 6: Calculate and display inverse of A
+print("\nInverse A^-1:\n", np.linalg.inv(A))
 
-# Calculate the inverse of matrix A
-print("\nInverse of Matrix A:")
-print(np.linalg.inv(A))
+# Step 7: Calculate eigenvalues and eigenvectors
+eigvals, eigvecs = np.linalg.eig(A)
+print("\nEigenvalues:", np.round(eigvals, 4))
 
-# Solve the linear equation Ax = b
-print("\nSolution of Ax = b:")
-print(np.linalg.solve(A, b))
+# Step 8: Solve the linear equation Ax = b
+x = np.linalg.solve(A, b)
+print("\nSolve A x = b --> x:", np.round(x, 4))
 
-# Calculate eigenvalues and eigenvectors
-eigenvalues, eigenvectors = np.linalg.eig(A)
-
-print("\nEigenvalues:")
-print(eigenvalues)
-
-print("\nEigenvectors:")
-print(eigenvectors)
 ```
 
 ## Output
 ```text
-Original Matrix A:
-[[1 2]
- [3 4]]
+Matrix A:
+ [[2. 1.]
+ [1. 3.]]
 
-Vector b:
-[5 6]
+Transpose A^T:
+ [[2. 1.]
+ [1. 3.]]
 
-Transpose of Matrix A:
-[[1 3]
- [2 4]]
+Inverse A^-1:
+ [[ 0.6 -0.2]
+ [-0.2  0.4]]
 
-Inverse of Matrix A:
-[[-2.   1. ]
- [ 1.5 -0.5]]
+Eigenvalues: [1.382 3.618]
 
-Solution of Ax = b:
-[-4.   4.5]
+Solve A x = b --> x: [0.2 0.6]
 
-Eigenvalues:
-[-0.37228132  5.37228132]
-
-Eigenvectors:
-[[-0.82456484 -0.41597356]
- [ 0.56576746 -0.90937671]]
 ```
 
 ## Result
